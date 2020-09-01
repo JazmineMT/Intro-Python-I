@@ -7,31 +7,31 @@ the list should be populated.
 Take a look at https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions
 for more info regarding list comprehensions.
 """
-
 # Write a list comprehension to produce the array [1, 2, 3, 4, 5]
+# for i in range(1, 6):
+    # i
 
-y = []
-for x in range(5):
-    y.append(x + 1)
+
+y = [i for i in range(1, 6)]
 
 print (y)
 
 # Write a list comprehension to produce the cubes of the numbers 0-9:
 # [0, 1, 8, 27, 64, 125, 216, 343, 512, 729]
+# for i in range(10):
+#     i ** 3
+y = [i ** 3 for i in range(10)]
 
-y = []
-for x in range(10):
-    y.append(x * x * x )
 print(y)
 
 # Write a list comprehension to produce the uppercase version of all the
 # elements in array a. Hint: "foo".upper() is "FOO".
 
 a = ["foo", "bar", "baz"]
+# for word in a:
+#     word.upper()
 
-y = []
-for x in range(len(a)):
-    y.append(a[x].upper())
+y = [word.upper() for word in a]
 
 print(y)
 
@@ -41,9 +41,6 @@ print(y)
 x = input("Enter comma-separated numbers: ").split(',')
 
 # What do you need between the square brackets to make it work?
-y = [num for num in x if num % 2 == 0]
-for num in x:
-    if num % 2 == 0:
-        y.append(num)
+y = [num for num in x if int(num) % 2 == 0]
 
 print(y)
