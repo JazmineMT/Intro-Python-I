@@ -12,6 +12,13 @@ z = "I like turtles!"
 # y, and z:
 # x is 10, y is 2.25, z is "I like turtles!"
 
+print(f" x is {x}  y is {y} z is {z}")
+
 # Use the 'format' string method to print the same thing
 
 # Finally, print the same thing using an f-string
+
+# txt = "For only {price:.2f} dollars!"
+# print(txt.format(price = 49))
+txt = " x is {num} y is {num} z is {sentence}"
+print(txt.format(num = x, num2 = y, sentence = z))
